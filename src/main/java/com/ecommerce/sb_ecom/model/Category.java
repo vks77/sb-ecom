@@ -1,6 +1,11 @@
 package com.ecommerce.sb_ecom.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity(name = "categories")
 public class Category {
+    @Id
     private Long categoryId;
     private String categoryName;
 
@@ -8,6 +13,10 @@ public class Category {
         this.categoryId = categoryId;
         this.categoryName = categoryName;
     }
+
+    public Category() {
+    }
+
 
     public String getCategoryName() {
         return categoryName;
